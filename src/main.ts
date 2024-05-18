@@ -302,6 +302,7 @@ async function run() {
         core.info(`Successfully installed ${project}`);
         core.info(`Binaries available at ${finalBinLocation}`);
         core.setOutput("assetdir", finalBinLocation);
+        core.info(`Output assetdir set to ${finalBinLocation}`);
     } catch (error) {
         if (error instanceof Error) {
             core.setFailed(error.message);
